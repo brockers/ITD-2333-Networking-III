@@ -2,6 +2,10 @@
 
 WARNING: This is an un-encrpyted tunnel.
 
+### Initial Setup
+
+You will need to connect have two routers on two different subnets connected through a wide area network (WAN.)  While the routers do not need to START with routes for each-others private networks, they must have access to each-others public interfaces.  The addresses 54.134.29.54 & 97.232.5.35 represent the public facing addresses of routers R1 and R2 respectively.
+
 ### Configure R1
 
 * conf t

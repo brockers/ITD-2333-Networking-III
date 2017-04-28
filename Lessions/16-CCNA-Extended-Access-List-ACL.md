@@ -1,12 +1,12 @@
-## ACL
+## Extended ACL
 
 Access lists are basically firewall rules that allow you to allow/block traffic to different parts of your network based on a number of rules.  
 
-Entended Access Lists work differently from Standard Access Lists in that they allow/block traffic from source ip, destination ip, OR entire ports.
+Extended Access Lists work differently from Standard Access Lists in that they allow/block traffic from source ip, destination ip, OR entire ports.
 
 Extended ACL that are numbered 100-199 and applied closes to the source.
 
-The Struture of an Extended Access List rule is:
+The structure of an Extended Access List rule is:
 
 	access-list [100-199] action ip/tcp/etc SOURCE DESTINATION
 
@@ -33,21 +33,21 @@ This will block traffic from (source) 10.0.0.100 to (aka destination) 172.16.0.0
 
 #### New Options
 
-When a protocal is specificed a particular port number is included using a qualifier.
+When a protocol is specified a particular port number is included using a qualifier.
 
    option  |   meaning
   -------------------------
      eq    | equals
      gt    | greater than
      lt    | less than
-   range   | range of ports 
+   range   | range of ports
 
 
 ### Advanced Rules
 
-#### Allow Interet Ports 
+#### Allow Internet Ports 
 
-Using Default deny for all other traffic.  
+Using Default deny for all other traffic.
 * conf t
 * access-list 100 permit tcp 10.0.0.0 0.0.0.255 host 192.168.1.100 eq 80
 
